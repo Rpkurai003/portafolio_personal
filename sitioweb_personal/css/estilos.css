@@ -1,0 +1,99 @@
+/* Variables con la paleta de colores requerida */
+:root {
+    --bg-black: #0d0d0d;
+    --bg-dark-card: #141414;
+    --purple-dark: #1c052d;
+    --purple-medium: #2a0845;
+    --purple-light: #b388ff;
+    --red-dark: #5c0000;
+    --red-accent: #8b0000;
+    --red-bright: #d32f2f;
+    --text-light: #e0e0e0;
+    
+    /* Fuentes requeridas (dos distintas) */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-heading: 'Roboto Slab', serif;
+}
+
+/* Estilos base */
+body {
+    background-color: var(--bg-black);
+    color: var(--text-light);
+    font-family: var(--font-primary);
+    padding-top: 80px; /* <--- AGREGADO: Espacio para que el menú fijo no tape el contenido */
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* Navegación y Footer */
+.bg-custom-dark {
+    background-color: #050505 !important; /* Mantiene el color sólido oscuro */
+    border-bottom: 2px solid var(--red-dark);
+}
+
+header.fixed-top {
+    z-index: 1030; /* <--- AGREGADO: Garantiza que la barra se quede arriba de todo */
+}
+
+/* Tarjetas y Contenedores */
+.card-custom {
+    background-color: var(--bg-dark-card);
+    border: 1px solid var(--purple-medium);
+    box-shadow: 0 4px 15px rgba(42, 8, 69, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    border-color: var(--red-accent);
+}
+
+/* Botones personalizados */
+.btn-danger-custom {
+    background-color: var(--red-accent);
+    border-color: var(--red-dark);
+}
+
+.btn-danger-custom:hover {
+    background-color: var(--red-bright);
+    border-color: var(--red-accent);
+}
+
+.btn-purple {
+    background-color: var(--purple-medium);
+    color: #ffffff;
+    border-color: var(--purple-light);
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-dark);
+    color: var(--purple-light);
+}
+
+/* Clases auxiliares */
+.text-danger-custom {
+    color: var(--red-bright);
+}
+
+.text-purple-light {
+    color: var(--purple-light);
+}
+
+.border-purple {
+    border-color: var(--purple-medium) !important;
+}
+
+.border-custom {
+    border: 3px solid var(--red-accent);
+}
+
+/* Formularios */
+.form-control:focus {
+    background-color: #1a1a1a;
+    color: #fff;
+    border-color: var(--red-accent);
+    box-shadow: 0 0 8px rgba(139, 0, 0, 0.6);
+}
